@@ -6,12 +6,8 @@ import java.util.Collection;
 import java.util.Locale;
 
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.text.StringEscapeUtils;
 
 
 
@@ -27,7 +23,7 @@ import org.apache.commons.text.StringEscapeUtils;
 public class Source_Target {
 	
 	
-    protected void responseSendError(HttpServletRequest request,HttpServletResponse response)
+    protected void responseSendError(HttpServletRequest request, HttpServletResponse response)
     	    throws ServletException, IOException {
     	        
     	    	//Case 1: Request Parameter wird in ein String geschrieben und vor der Verwendung desinfiziert.
