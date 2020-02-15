@@ -29,10 +29,10 @@ public class TargetTransformationSource {
 		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Positiv(request.getParameter("page")) );
 		
 		//Transformation level 1 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Negative(request.getParameter("page")) );
+		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel1Negative(request.getParameter("page")) );
 	
 		//Transformation level 2 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Negative(request.getParameter("page")) );
+		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel2Negative(request.getParameter("page")) );
 		
 		//Transformation level 3 Negative
 		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Negative(request.getParameter("page")) );

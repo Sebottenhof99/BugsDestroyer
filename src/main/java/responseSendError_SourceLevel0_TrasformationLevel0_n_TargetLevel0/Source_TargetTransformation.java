@@ -33,10 +33,10 @@ public class Source_TargetTransformation {
     	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel3Positiv(requestParameter));
     	
     	// Transformation level 1 negative
-    	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel3Negative(requestParameter));
+    	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel1Negative(requestParameter));
  
     	//Transformation level 2 negative
-    	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel3Negative(requestParameter));
+    	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel2Negative(requestParameter));
     	
     	//Transformation level 3 negative
     	response.sendError(HttpServletResponse.SC_NOT_FOUND,  transformationLevel3Negative(requestParameter));

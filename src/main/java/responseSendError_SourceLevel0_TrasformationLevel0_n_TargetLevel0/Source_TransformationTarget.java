@@ -34,8 +34,8 @@ public class Source_TransformationTarget {
     	    	TransformationLevel1target(requestParameter);
     	    	TransformationLevel2target(requestParameter);
     	    	TransformationLevel3target(requestParameter);
-    	    	TransformationLevel3targetNegative(requestParameter);
-    	    	TransformationLevel3targetNegative(requestParameter);
+    	    	TransformationLevel1targetNegative(requestParameter);
+    	    	TransformationLevel2targetNegative(requestParameter);
     	    	TransformationLevel3targetNegative(requestParameter);
     	    	
     	    }
