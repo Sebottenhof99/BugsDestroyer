@@ -1,44 +1,58 @@
-package responseSendError_SourceLevel0_TrasformationLevel0_n_TargetLevel0;
-
-import java.io.IOException;
+package dynamicCodeExecution_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class TargetTransformationSource {
 
-	
+
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	
 	protected void main()
-    	    throws ServletException, IOException {
+			throws ServletException, IOException, ScriptException {
+
+
+		ScriptEngineManager manager = new ScriptEngineManager();
+		ScriptEngine engine = manager.getEngineByName("JavaScript");
+		engine.eval(StringEscapeUtils.escapeEcmaScript(request.getParameter("name"))); // Noncompliant
 		//Transformation level 0 
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,StringEscapeUtils.escapeEcmaScript(request.getParameter("page")) );
+
+
 
 		//Transformation level 1
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel1Positiv(request.getParameter("page")) );
-		
+		engine.eval(transformationLevel1Positiv(request.getParameter("name")));
+
+
 		//Transformation level 2
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel2Positiv(request.getParameter("page")) );
+		engine.eval(transformationLevel2Positiv(request.getParameter("name")));
+
+		
 				
 		//Transformation level 3
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Positiv(request.getParameter("page")) );
+		engine.eval( transformationLevel3Positiv(request.getParameter("name")));
+
+		
 		
 		//Transformation level 1 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel1Negative(request.getParameter("page")) );
+		engine.eval( transformationLevel1Negative(request.getParameter("name")));
+	
 	
 		//Transformation level 2 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel2Negative(request.getParameter("page")) );
+		engine.eval( transformationLevel2Negative(request.getParameter("name")));
+		
 		
 		//Transformation level 3 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Negative(request.getParameter("page")) );
-
+		engine.eval( transformationLevel3Negative(request.getParameter("name")));
+				
 	}
-	
 	
 	
 	// Transformation Level 1
@@ -86,6 +100,5 @@ public class TargetTransformationSource {
 			return s;
 		}
 	}
-	
 	
 }

@@ -1,44 +1,56 @@
-package responseSendError_SourceLevel0_TrasformationLevel0_n_TargetLevel0;
-
-import java.io.IOException;
+package responseSplitting_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class TargetTransformationSource {
 
-	
+
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 	
 	protected void main()
     	    throws ServletException, IOException {
 		//Transformation level 0 
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,StringEscapeUtils.escapeEcmaScript(request.getParameter("page")) );
+		 Cookie cookie = new Cookie("name", StringEscapeUtils.escapeEcmaScript(request.getParameter("name")));
+		 response.addCookie(cookie);
 
 		//Transformation level 1
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel1Positiv(request.getParameter("page")) );
-		
+		 
+		 Cookie cookie_1 = new Cookie("name", transformationLevel1Positiv(request.getParameter("name")));
+		 response.addCookie(cookie_1);
+
 		//Transformation level 2
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel2Positiv(request.getParameter("page")) );
+		 
+		 Cookie cookie_2 = new Cookie("name", transformationLevel2Positiv(request.getParameter("name")));
+		 response.addCookie(cookie_2);
+		
 				
 		//Transformation level 3
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Positiv(request.getParameter("page")) );
+		 Cookie cookie_3 = new Cookie("name", transformationLevel3Positiv(request.getParameter("name")));
+		 response.addCookie(cookie_3);
+		
 		
 		//Transformation level 1 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel1Negative(request.getParameter("page")) );
+		 Cookie cookie_11 = new Cookie("name", transformationLevel1Negative(request.getParameter("name")));
+		 response.addCookie(cookie_11);
+	
 	
 		//Transformation level 2 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel2Negative(request.getParameter("page")) );
+		 Cookie cookie_22 = new Cookie("name", transformationLevel2Negative(request.getParameter("name")));
+		 response.addCookie(cookie_22);
+		
 		
 		//Transformation level 3 Negative
-		response.sendError(HttpServletResponse.SC_NOT_FOUND,transformationLevel3Negative(request.getParameter("page")) );
-
+		 Cookie cookie_33 = new Cookie("name", transformationLevel3Negative(request.getParameter("name")));
+		 response.addCookie(cookie_33);
+				
 	}
-	
 	
 	
 	// Transformation Level 1
@@ -86,6 +98,5 @@ public class TargetTransformationSource {
 			return s;
 		}
 	}
-	
 	
 }
