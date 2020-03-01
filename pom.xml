@@ -38,4 +38,11 @@
 
     </dependencies>
 
+    <properties>
+        <sonar.projectKey>Sebottenhof99_BugsDestroyer</sonar.projectKey>
+        <sonar.organization>sebottenhof99</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.login>81ea9c775cd462ddb3f36d5aa567699eb295ca34</sonar.login>
+    </properties>
+
 </project>
