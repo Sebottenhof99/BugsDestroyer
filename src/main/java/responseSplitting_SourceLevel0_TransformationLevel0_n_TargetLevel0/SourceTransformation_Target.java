@@ -80,7 +80,7 @@ Insgesamt sind 3 Fehlermeldungen zu erwarten
 
 		// Transformation Level 1 Negative
 		private String transformationLevel1Negative(String requestParameter) {
-				return StringEscapeUtils.escapeEcmaScript(requestParameter);
+				return requestParameter;
 		}
 		
 		// Transformation Level 2 Negative

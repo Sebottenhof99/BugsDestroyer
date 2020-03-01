@@ -33,9 +33,9 @@ public class Source_Transformation_Target {
     	    	
     	    	String xNeg = transformationLevel1Negative(requestParameter);
 
-    	    	String yNeg = transformationLevel1Negative(requestParameter);
+    	    	String yNeg = transformationLevel2Negative(requestParameter);
     	    	
-    	    	String zNeg = transformationLevel1Negative(requestParameter);
+    	    	String zNeg = transformationLevel3Negative(requestParameter);
 
 		ScriptEngineManager manager = new ScriptEngineManager();
 		ScriptEngine engine = manager.getEngineByName("JavaScript");
@@ -43,9 +43,9 @@ public class Source_Transformation_Target {
 		engine.eval(transformationLevel1Positiv(x));
 		engine.eval(transformationLevel2Positiv(y));
 		engine.eval(transformationLevel3Positiv(z));
-		engine.eval(transformationLevel1Negative(xNeg));
-		engine.eval(transformationLevel2Negative(yNeg));
-		engine.eval(transformationLevel3Negative(zNeg));
+		engine.eval(xNeg);
+		engine.eval(yNeg);
+		engine.eval(zNeg);
 
 
     	    }
@@ -78,7 +78,7 @@ public class Source_Transformation_Target {
 	
 	// Transformation Level 1 
 	private String transformationLevel1Negative(String requestParameter) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return requestParameter;
 	}
 	
 	// Transformation Level 2

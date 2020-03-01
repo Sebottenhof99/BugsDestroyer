@@ -71,7 +71,7 @@ public class TargetTransformationSource {
 
 	// Transformation Level 1 
 	private String transformationLevel1Negative(String requestParameter) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return requestParameter;
 	}
 	
 	// Transformation Level 2
@@ -85,10 +85,8 @@ public class TargetTransformationSource {
 		String s = requestParameter;
 		if(s.isEmpty()) {
 			return s;
-		}else {
+		}else{
 			return s;
 		}
 	}
-	
-	
 }

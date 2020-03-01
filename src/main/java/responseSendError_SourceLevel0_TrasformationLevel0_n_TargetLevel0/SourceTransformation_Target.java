@@ -41,13 +41,8 @@ public class SourceTransformation_Target {
     	    	
     	    	String requestParameter33 = transformationLevel3Negative(request.getParameter("page"));
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, requestParameter33 );
-    	    	
-    	    	
 
-    	            	        
     	    }
-    
-    	
     
 
 	// Transformation Level 1
@@ -75,7 +70,7 @@ public class SourceTransformation_Target {
 
 		// Transformation Level 1 Negative
 		private String transformationLevel1Negative(String requestParameter) {
-				return StringEscapeUtils.escapeEcmaScript(requestParameter);
+				return requestParameter;
 		}
 		
 		// Transformation Level 2 Negative
