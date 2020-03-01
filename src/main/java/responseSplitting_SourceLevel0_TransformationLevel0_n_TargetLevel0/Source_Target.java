@@ -11,8 +11,12 @@ public class Source_Target {
 	/*
 	 * In diesem Fall Target ist das das Objket "Cookie", das bei der Initialisierung ein Parameter bekommt. Der reingehender Parameter muss desinfiziert werden. 
 	 */
+	/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
 
-	 protected void doGet(HttpServletRequest request, HttpServletResponse response)
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			    throws ServletException, IOException {
 	
 		 

@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
+/*
+      Es sind 3 Fehlermeldungen zu erwarten.
+
+   */
 public class SourceTransformation_Target {
 	
 	
@@ -73,7 +78,7 @@ public class SourceTransformation_Target {
 
 		// Transformation Level 1 Negative
 		private String transformationLevel1Negative(String requestParameter) {
-				return StringEscapeUtils.escapeEcmaScript(requestParameter);
+				return requestParameter;
 		}
 		
 		// Transformation Level 2 Negative

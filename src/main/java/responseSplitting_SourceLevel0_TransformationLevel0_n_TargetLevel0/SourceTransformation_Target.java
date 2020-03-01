@@ -14,6 +14,9 @@ public class SourceTransformation_Target {
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
 
 	protected void responseSendError()
     	    throws ServletException, IOException {
@@ -77,7 +80,7 @@ public class SourceTransformation_Target {
 
 		// Transformation Level 1 Negative
 		private String transformationLevel1Negative(String requestParameter) {
-				return StringEscapeUtils.escapeEcmaScript(requestParameter);
+				return requestParameter;
 		}
 		
 		// Transformation Level 2 Negative

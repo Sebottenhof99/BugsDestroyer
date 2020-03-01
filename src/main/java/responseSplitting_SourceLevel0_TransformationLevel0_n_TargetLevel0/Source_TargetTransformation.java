@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
+
 public class Source_TargetTransformation {
 
 
@@ -28,9 +33,9 @@ public class Source_TargetTransformation {
 			
 		Cookie cookie_3 = new Cookie("name", transformationLevel3Positiv(requestParameter));
 
-		Cookie cookie_1_negativ = new Cookie("name", transformationLevel3Negative(requestParameter));
+		Cookie cookie_1_negativ = new Cookie("name", transformationLevel1Negative(requestParameter));
 		
-		Cookie cookie_2_negative = new Cookie("name", transformationLevel3Negative(requestParameter));
+		Cookie cookie_2_negative = new Cookie("name", transformationLevel2Negative(requestParameter));
 		
 		Cookie cookie_3_negative = new Cookie("name", transformationLevel3Negative(requestParameter));
     

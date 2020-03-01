@@ -7,6 +7,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
 
 public class TargetTransformationSource {
 
@@ -80,7 +83,7 @@ public class TargetTransformationSource {
 
 	// Transformation Level 1 
 	private String transformationLevel1Negative(String requestParameter) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return requestParameter;
 	}
 	
 	// Transformation Level 2

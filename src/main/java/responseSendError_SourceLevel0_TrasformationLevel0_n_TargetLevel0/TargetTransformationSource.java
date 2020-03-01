@@ -7,6 +7,9 @@ import org.apache.commons.text.StringEscapeUtils;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
 
 public class TargetTransformationSource {
 
@@ -68,7 +71,7 @@ public class TargetTransformationSource {
 
 	// Transformation Level 1 
 	private String transformationLevel1Negative(String requestParameter) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return requestParameter;
 	}
 	
 	// Transformation Level 2
@@ -82,10 +85,8 @@ public class TargetTransformationSource {
 		String s = requestParameter;
 		if(s.isEmpty()) {
 			return s;
-		}else {
+		}else{
 			return s;
 		}
 	}
-	
-	
 }

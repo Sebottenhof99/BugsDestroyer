@@ -8,6 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
+
 public class Source_TransformationTarget {
 	private HttpServletRequest request;
 	private HttpServletResponse response;
@@ -20,8 +25,8 @@ public class Source_TransformationTarget {
     	    	TransformationLevel1target(requestParameter);
     	    	TransformationLevel2target(requestParameter);
     	    	TransformationLevel3target(requestParameter);
-    	    	TransformationLevel3targetNegative(requestParameter);
-    	    	TransformationLevel3targetNegative(requestParameter);
+    	    	TransformationLevel1targetNegative(requestParameter);
+    	    	TransformationLevel2targetNegative(requestParameter);
     	    	TransformationLevel3targetNegative(requestParameter);
     	    	
     	    }
