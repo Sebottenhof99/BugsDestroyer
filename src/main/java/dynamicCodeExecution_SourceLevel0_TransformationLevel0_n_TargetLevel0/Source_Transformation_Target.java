@@ -14,7 +14,10 @@ public class Source_Transformation_Target {
 
 	private HttpServletRequest request;
 	private HttpServletResponse response;
-    
+    /*
+		Es sind 3 Fehlermeldungen zu erwarten.
+
+     */
 	
 	
 	protected void main()

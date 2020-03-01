@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletResponse;
  * In Rahmen dieses Packetes ist nur der Transformationsteil variabel von 0 - n Zeilen Code, die Quellenparameter manupulieren.
  * 
  */
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
+
 public class Source_Transformation_Target {
 
 	private HttpServletRequest request;

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /*
  * 	In diesem Fall gibt es keine Transformation und die Quelle und Ziel befinden sich innerhalb einer methode.  
  * 
- * 
+ *  Insgesamt sind 4 Fehlermeldungen zu erwarten
  * 
  */
 

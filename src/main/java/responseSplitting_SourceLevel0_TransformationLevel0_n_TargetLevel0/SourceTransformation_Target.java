@@ -14,6 +14,9 @@ public class SourceTransformation_Target {
 	private HttpServletRequest request;
 	private HttpServletResponse response;
 
+/*
+Insgesamt sind 3 Fehlermeldungen zu erwarten
+ */
 
 	protected void responseSendError()
     	    throws ServletException, IOException {

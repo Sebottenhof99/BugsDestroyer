@@ -10,6 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+
+/*
+
+// Zu erwarten sind 3 Fehlermeldungen
+ */
+
 public class Source_TargetTransformation {
 
 
@@ -27,6 +33,7 @@ public class Source_TargetTransformation {
 		engine.eval(transformationLevel1Positiv(input));
 		engine.eval(transformationLevel2Positiv(input));
 		engine.eval(transformationLevel3Positiv(input));
+
 		engine.eval(transformationLevel1Negative(input));
 		engine.eval(transformationLevel2Negative(input));
 		engine.eval(transformationLevel3Negative(input));
