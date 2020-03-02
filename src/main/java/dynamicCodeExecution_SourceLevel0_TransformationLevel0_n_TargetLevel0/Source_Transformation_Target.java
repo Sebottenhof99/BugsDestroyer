@@ -40,9 +40,9 @@ public class Source_Transformation_Target {
 		ScriptEngineManager manager = new ScriptEngineManager();
 		ScriptEngine engine = manager.getEngineByName("JavaScript");
 
-		engine.eval(transformationLevel1Positiv(x));
-		engine.eval(transformationLevel2Positiv(y));
-		engine.eval(transformationLevel3Positiv(z));
+		engine.eval(x);
+		engine.eval(y);
+		engine.eval(z);
 		engine.eval(xNeg);
 		engine.eval(yNeg);
 		engine.eval(zNeg);

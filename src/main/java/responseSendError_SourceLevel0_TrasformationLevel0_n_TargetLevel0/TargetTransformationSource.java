@@ -77,8 +77,8 @@ public class TargetTransformationSource {
 	// Transformation Level 2
 	private String transformationLevel2Negative(String requestParameter) {
 		String x = requestParameter;	
-	return x;
-		}
+		return x;
+	}
 	
 	// Transformation Level 3
 	private String transformationLevel3Negative(String requestParameter) {
