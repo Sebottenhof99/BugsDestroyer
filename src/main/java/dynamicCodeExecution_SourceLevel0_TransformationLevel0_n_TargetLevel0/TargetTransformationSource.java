@@ -76,9 +76,9 @@ public class TargetTransformationSource {
 	private String transformationLevel3Positiv(String requestParameter) {
 		String s = StringEscapeUtils.escapeEcmaScript(requestParameter);
 		if(s.isEmpty()) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return StringEscapeUtils.escapeEcmaScript(s);
 		}else {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return StringEscapeUtils.escapeEcmaScript(s);
 		}
 		
 	}

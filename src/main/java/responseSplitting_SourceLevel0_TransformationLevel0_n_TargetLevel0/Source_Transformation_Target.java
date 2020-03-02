@@ -43,7 +43,7 @@ public class Source_Transformation_Target {
     				
     			Cookie cookie_3 = new Cookie("name", z);
 
-    			Cookie cookie_1_negativ = new Cookie("name", xNeg);
+    			Cookie cookie_1_negative = new Cookie("name", xNeg);
     			
     			Cookie cookie_2_negative = new Cookie("name", yNeg);
     			
@@ -53,7 +53,7 @@ public class Source_Transformation_Target {
     	        response.addCookie(cookie_2);
     	        response.addCookie(cookie_3);
     			
-    	        response.addCookie(cookie_1_negativ);
+    	        response.addCookie(cookie_1_negative);
     	        response.addCookie(cookie_2_negative);
     	        response.addCookie(cookie_3_negative);
     	    }
