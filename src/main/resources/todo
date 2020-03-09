@@ -1,0 +1,8 @@
+
+https://rules.sonarsource.com/java/tag/injection/RSPEC-5334
+
+
+
+HTTP response headers should not be vulnerable to injection attacks
+Server-side requests should not be vulnerable to forging attacks
+Logging should not be vulnerable to in
