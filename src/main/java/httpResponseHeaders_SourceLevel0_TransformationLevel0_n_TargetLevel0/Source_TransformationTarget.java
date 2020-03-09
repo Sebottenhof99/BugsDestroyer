@@ -1,4 +1,4 @@
-package httpRequestRedirections_SourceLevel0_TransformationLevel0_n_TargetLevel0;
+package httpResponseHeaders_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -24,7 +24,7 @@ public class Source_TransformationTarget {
 	protected void main()
     	    throws ServletException, IOException {
     	    	
-    	    	String requestParameter = request.getParameter("URL");
+    	    	String requestParameter = request.getParameter("page");
     	    	
     	    	TransformationLevel1target(requestParameter);
     	    	TransformationLevel2target(requestParameter);
@@ -36,33 +36,33 @@ public class Source_TransformationTarget {
     	    }
 	
 	private void TransformationLevel1target(String requestParameter) throws IOException {
-		 response.sendRedirect( StringEscapeUtils.escapeEcmaScript(requestParameter) );
+		 response.addHeader("X-Header", StringEscapeUtils.escapeEcmaScript(requestParameter) );
 	}
 	
 	private void TransformationLevel2target(String requestParameter) throws IOException {
 		 String x = StringEscapeUtils.escapeEcmaScript(requestParameter);
-		 response.sendRedirect( x );
+		 response.addHeader("X-Header", x );
 	}
 
 	private void TransformationLevel3target(String requestParameter) throws IOException {
 		 String x = StringEscapeUtils.escapeEcmaScript(requestParameter);
 		 String y = x; 
-		 response.sendRedirect(y);
+		 response.addHeader("X-Header",y);
 	}
 	
 	private void TransformationLevel1targetNegative(String requestParameter) throws IOException {
-		 response.sendRedirect( requestParameter );
+		 response.addHeader("X-Header", requestParameter );
 	}
 	
 	private void TransformationLevel2targetNegative(String requestParameter) throws IOException {
 		 String x = requestParameter;
-		 response.sendRedirect( x );
+		 response.addHeader("X-Header", x );
 	}
 	
 	private void TransformationLevel3targetNegative(String requestParameter) throws IOException {
 		 String x = requestParameter;
 		 String y = x; 
-		 response.sendRedirect( y );
+		 response.addHeader("X-Header", y );
 	}
 
 }

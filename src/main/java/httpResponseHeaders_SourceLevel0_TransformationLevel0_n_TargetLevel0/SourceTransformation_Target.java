@@ -1,4 +1,4 @@
-package httpRequestRedirections_SourceLevel0_TransformationLevel0_n_TargetLevel0;
+package httpResponseHeaders_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -14,27 +14,27 @@ public class SourceTransformation_Target {
     	    throws ServletException, IOException {
     	        
     	    	//Source(Transformation) Diesen Fall kann man auf das Problem SourceTarget reduzieren Source(Transoformation) = new Source
-    	    	String requestParameter = StringEscapeUtils.escapeEcmaScript(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter );
+    	    	String requestParameter = StringEscapeUtils.escapeEcmaScript(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter );
     	    	
-    	    	String requestParameter1 = transformationLevel1Positiv(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter1 );
+    	    	String requestParameter1 = transformationLevel1Positiv(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter1 );
     	    	
-    	    	String requestParameter2 = transformationLevel2Positiv(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter2 );
+    	    	String requestParameter2 = transformationLevel2Positiv(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter2 );
     	    	
-    	    	String requestParameter3 = transformationLevel3Positiv(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter3 );
+    	    	String requestParameter3 = transformationLevel3Positiv(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter3 );
     	    	
     	    	
-    	    	String requestParameter11 = transformationLevel1Negative(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter11 );
+    	    	String requestParameter11 = transformationLevel1Negative(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter11 );
     	    	
-    	    	String requestParameter22 = transformationLevel2Negative(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter22 );
+    	    	String requestParameter22 = transformationLevel2Negative(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter22 );
     	    	
-    	    	String requestParameter33 = transformationLevel3Negative(request.getParameter("URL"));
-    	    	response.sendRedirect( requestParameter33 );
+    	    	String requestParameter33 = transformationLevel3Negative(request.getParameter("page"));
+    	    	response.addHeader("X-Header", requestParameter33 );
     	    	
     	    	
 

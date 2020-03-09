@@ -1,4 +1,4 @@
-package httpRequestRedirections_SourceLevel0_TransformationLevel0_n_TargetLevel0;
+package httpResponseHeaders_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -16,25 +16,25 @@ public class TargetTransformationSource {
 	protected void main()
     	    throws ServletException, IOException {
 		//Transformation level 0 
-		response.sendRedirect(StringEscapeUtils.escapeEcmaScript(request.getParameter("URL")) );
+		response.addHeader("X-Header",StringEscapeUtils.escapeEcmaScript(request.getParameter("page")) );
 
 		//Transformation level 1
-		response.sendRedirect(transformationLevel1Positiv(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel1Positiv(request.getParameter("page")) );
 		
 		//Transformation level 2
-		response.sendRedirect(transformationLevel2Positiv(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel2Positiv(request.getParameter("page")) );
 				
 		//Transformation level 3
-		response.sendRedirect(transformationLevel3Positiv(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel3Positiv(request.getParameter("page")) );
 		
 		//Transformation level 1 Negative
-		response.sendRedirect(transformationLevel1Negative(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel1Negative(request.getParameter("page")) );
 	
 		//Transformation level 2 Negative
-		response.sendRedirect(transformationLevel2Negative(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel2Negative(request.getParameter("page")) );
 		
 		//Transformation level 3 Negative
-		response.sendRedirect(transformationLevel3Negative(request.getParameter("URL")) );
+		response.addHeader("X-Header",transformationLevel3Negative(request.getParameter("page")) );
 
 	}
 	
@@ -67,7 +67,7 @@ public class TargetTransformationSource {
 
 	// Transformation Level 1 
 	private String transformationLevel1Negative(String requestParameter) {
-			return StringEscapeUtils.escapeEcmaScript(requestParameter);
+			return requestParameter;
 	}
 	
 	// Transformation Level 2

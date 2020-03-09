@@ -1,4 +1,4 @@
-package httpRequestRedirections_SourceLevel0_TransformationLevel0_n_TargetLevel0;
+package httpResponseHeaders_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
 import org.apache.commons.text.StringEscapeUtils;
 
@@ -37,12 +37,12 @@ public class Source_Transformation_Target {
     	    	
     	    	String zNeg = transformationLevel1Negative(requestParameter);
     	    	
-    	    	response.sendRedirect( x );
-    	    	response.sendRedirect( y );
-    	    	response.sendRedirect( z );
-    	    	response.sendRedirect( xNeg );
-    	    	response.sendRedirect( yNeg );
-    	    	response.sendRedirect( zNeg );
+    	    	response.addHeader("X-Header", x );
+    	    	response.addHeader("X-Header", y );
+    	    	response.addHeader("X-Header", z );
+    	    	response.addHeader("X-Header", xNeg );
+    	    	response.addHeader("X-Header", yNeg );
+    	    	response.addHeader("X-Header", zNeg );
     	    	
     	    }
 	
