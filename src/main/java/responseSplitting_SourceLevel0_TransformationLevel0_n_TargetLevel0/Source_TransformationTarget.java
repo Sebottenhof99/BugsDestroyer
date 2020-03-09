@@ -21,14 +21,12 @@ public class Source_TransformationTarget {
     	    throws ServletException, IOException {
     	    	
     	    	String requestParameter = request.getParameter("name");
-    	    	
     	    	TransformationLevel1target(requestParameter);
     	    	TransformationLevel2target(requestParameter);
     	    	TransformationLevel3target(requestParameter);
     	    	TransformationLevel1targetNegative(requestParameter);
     	    	TransformationLevel2targetNegative(requestParameter);
     	    	TransformationLevel3targetNegative(requestParameter);
-    	    	
     	    }
 	
 	private void TransformationLevel1target(String requestParameter) throws IOException {

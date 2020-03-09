@@ -36,7 +36,7 @@ public class Source_TransformationTarget {
 	private void TransformationLevel1target(String requestParameter) throws IOException, ScriptException {
 		ScriptEngineManager manager = new ScriptEngineManager();
 		ScriptEngine engine = manager.getEngineByName("JavaScript");
-		engine.eval(requestParameter);
+		engine.eval(StringEscapeUtils.escapeEcmaScript(requestParameter));
 	}
 	
 	private void TransformationLevel2target(String requestParameter) throws IOException, ScriptException {
