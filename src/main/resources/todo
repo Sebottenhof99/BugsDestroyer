@@ -8,3 +8,4 @@ Server-side requests should not be vulnerable to forging attacks
 Logging should not be vulnerable to in
 String value = req.getParameter("value");
   resp.addHeader("X-Header", value); // Noncompliant
+  mvn verify sonar:sonar
