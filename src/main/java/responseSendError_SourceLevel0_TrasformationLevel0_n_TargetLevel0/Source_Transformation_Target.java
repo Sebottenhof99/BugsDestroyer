@@ -79,14 +79,16 @@ public class Source_Transformation_Target {
 	}
 
 
-	private String falsePositivTransformationLevel3(String requestParameter) {
+	private static String falsePositivTransformationLevel3(String requestParameter) {
 		String s = StringEscapeUtils.escapeEcmaScript(requestParameter);
 		if(s.isEmpty()) {
 			StringEscapeUtils.escapeEcmaScript(s);
+			s = requestParameter;
 			return s;
 		}else {
 			StringEscapeUtils.escapeEcmaScript(s);
-			return s;
+			s = requestParameter;
+			return s ;
 		}
 	}
 
