@@ -53,7 +53,7 @@ Insgesamt sind 3 Fehlermeldungen zu erwarten
     	    	
     	    	String requestParameter33 = transformationLevel3Negative(request.getParameter("name"));
     	    	URL url_33 = new URL( requestParameter33);
-				HttpURLConnection conn_33 = (HttpURLConnection) url_22.openConnection();
+				HttpURLConnection conn_33 = (HttpURLConnection) url_33.openConnection();
 
 
     	    }
