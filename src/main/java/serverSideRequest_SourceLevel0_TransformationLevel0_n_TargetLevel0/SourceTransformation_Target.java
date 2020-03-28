@@ -1,7 +1,9 @@
 package serverSideRequest_SourceLevel0_TransformationLevel0_n_TargetLevel0;
 
+import org.apache.commons.httpclient.util.HttpURLConnection;
 import org.apache.commons.text.StringEscapeUtils;
-import sun.net.www.protocol.http.HttpURLConnection;
+
+
 
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -51,7 +53,7 @@ Insgesamt sind 3 Fehlermeldungen zu erwarten
     	    	
     	    	String requestParameter33 = transformationLevel3Negative(request.getParameter("name"));
     	    	URL url_33 = new URL( requestParameter33);
-				HttpURLConnection conn_33 = (HttpURLConnection) url_22.openConnection();
+				HttpURLConnection conn_33 = (HttpURLConnection) url_33.openConnection();
 
 
     	    }

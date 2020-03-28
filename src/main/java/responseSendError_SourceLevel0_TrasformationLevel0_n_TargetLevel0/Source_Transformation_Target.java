@@ -42,18 +42,56 @@ public class Source_Transformation_Target {
     	    	String yNeg = transformationLevel2Negative(requestParameter);
     	    	
     	    	String zNeg = transformationLevel3Negative(requestParameter);
-    	    	
+
+    	    	String falsePositivX = falsePositivTransformationLevel1(requestParameter);
+
+    	    	String falsePositivY = falsePositivTransformationLevel2(requestParameter);
+
+    	    	String falsePositivZ = falsePositivTransformationLevel3(requestParameter);
+
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, x );
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, y );
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, z );
-    	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, xNeg );
+
+    	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, falsePositivX );
+				response.sendError(HttpServletResponse.SC_NOT_FOUND, falsePositivY );
+				response.sendError(HttpServletResponse.SC_NOT_FOUND, falsePositivZ );
+
+
+
+				response.sendError(HttpServletResponse.SC_NOT_FOUND, xNeg );
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, yNeg );
     	    	response.sendError(HttpServletResponse.SC_NOT_FOUND, zNeg );
     	    	
     	    }
-	
-	
-	
+
+
+
+	private String falsePositivTransformationLevel1(String requestParameter) {
+		 StringEscapeUtils.escapeEcmaScript(requestParameter);
+		 return requestParameter;
+	}
+
+
+	private String falsePositivTransformationLevel2(String requestParameter) {
+		String escapedString = StringEscapeUtils.escapeEcmaScript(requestParameter);
+		return requestParameter;
+	}
+
+
+	private static String falsePositivTransformationLevel3(String requestParameter) {
+		String s = StringEscapeUtils.escapeEcmaScript(requestParameter);
+		if(s.isEmpty()) {
+			StringEscapeUtils.escapeEcmaScript(s);
+			s = requestParameter;
+			return s;
+		}else {
+			StringEscapeUtils.escapeEcmaScript(s);
+			s = requestParameter;
+			return s ;
+		}
+	}
+
 	// Transformation Level 1
 	private String transformationLevel1Positiv(String requestParameter) {
 		return StringEscapeUtils.escapeEcmaScript(requestParameter);
