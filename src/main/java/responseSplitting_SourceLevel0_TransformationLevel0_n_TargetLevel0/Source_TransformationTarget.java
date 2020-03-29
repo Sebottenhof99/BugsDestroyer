@@ -56,14 +56,14 @@ public class Source_TransformationTarget {
 	}
 	
 	private void TransformationLevel2targetNegative(String requestParameter) throws IOException {
-		 String x = requestParameter;
-		 Cookie cookie = new Cookie("name", x);
+		 requestParameter.contains(requestParameter);
+		 Cookie cookie = new Cookie("name", requestParameter);
 		 response.addCookie(cookie);
 	}
 	
 	private void TransformationLevel3targetNegative(String requestParameter) throws IOException {
-		 String x = requestParameter;
-		 String y = x; 
+		 requestParameter.contains(requestParameter);;
+		 String y = requestParameter;
 		 Cookie cookie = new Cookie("name", y);
 		 response.addCookie(cookie);
 	}

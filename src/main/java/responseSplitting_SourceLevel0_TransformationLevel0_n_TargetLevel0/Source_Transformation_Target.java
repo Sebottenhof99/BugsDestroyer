@@ -36,6 +36,12 @@ public class Source_Transformation_Target {
     	    	String yNeg = transformationLevel2Negative(requestParameter);
     	    	
     	    	String zNeg = transformationLevel3Negative(requestParameter);
+
+				String xfalsePos = falsePositivTransformationLevel1(requestParameter);
+
+				String yfalsePos = falsePositivTransformationLevel2(requestParameter);
+
+				String zfalsePos = falsePositivTransformationLevel3(requestParameter);
     	    	
     	    	Cookie cookie_1 = new Cookie("name", x);
 
@@ -48,6 +54,14 @@ public class Source_Transformation_Target {
     			Cookie cookie_2_negative = new Cookie("name", yNeg);
     			
     			Cookie cookie_3_negative = new Cookie("name", zNeg);
+
+				Cookie cookie_1_falsePositive = new Cookie("name", xfalsePos);
+
+				Cookie cookie_2_falsePositive = new Cookie("name", yfalsePos);
+
+				Cookie cookie_3_falsePositive = new Cookie("name", zfalsePos);
+
+
     	    
     			response.addCookie(cookie_1);
     	        response.addCookie(cookie_2);
@@ -91,18 +105,54 @@ public class Source_Transformation_Target {
 	
 	// Transformation Level 2
 		private String transformationLevel2Negative(String requestParameter) {
-			String x = requestParameter;	
-			return x;
+			requestParameter.contains(requestParameter);
+			return requestParameter;
 		}
 	
 	// Transformation Level 3
 	private String transformationLevel3Negative(String requestParameter) {
 		String s = requestParameter;
-		if(s.isEmpty()) {
-			return s;
-		}else {
-			return s;
+		if(s.equalsIgnoreCase(requestParameter)){
+			return requestParameter;
+		}else{
+			return s ;
 		}
 	}
-	
+
+
+	private String falsePositivTransformationLevel1(String requestParameter) {
+		StringEscapeUtils.escapeEcmaScript(requestParameter);
+		return requestParameter;
+	}
+
+
+	private String falsePositivTransformationLevel2(String requestParameter) {
+		if(requestParameter.contains(requestParameter)){
+			return requestParameter;
+		}else{
+			return requestParameter;
+		}
+
+	}
+
+
+	private static String falsePositivTransformationLevel3(String requestParameter) {
+		String s = StringEscapeUtils.escapeEcmaScript(requestParameter);
+		if(s.isEmpty()) {
+
+			return s;
+		}else {
+			if(s.equalsIgnoreCase(requestParameter)){
+				return requestParameter;
+			}else{
+				StringEscapeUtils.escapeEcmaScript(s);
+				s = requestParameter;
+				return s ;
+			}
+
+		}
+	}
+
+
+
 }
