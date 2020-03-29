@@ -105,17 +105,17 @@ public class Source_Transformation_Target {
 	
 	// Transformation Level 2
 		private String transformationLevel2Negative(String requestParameter) {
-			String x = requestParameter;	
-			return x;
+			requestParameter.contains(requestParameter);
+			return requestParameter;
 		}
 	
 	// Transformation Level 3
 	private String transformationLevel3Negative(String requestParameter) {
 		String s = requestParameter;
-		if(s.isEmpty()) {
-			return s;
-		}else {
-			return s;
+		if(s.equalsIgnoreCase(requestParameter)){
+			return requestParameter;
+		}else{
+			return s ;
 		}
 	}
 
