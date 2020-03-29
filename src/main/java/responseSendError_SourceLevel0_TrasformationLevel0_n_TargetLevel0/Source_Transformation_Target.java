@@ -74,21 +74,29 @@ public class Source_Transformation_Target {
 
 
 	private String falsePositivTransformationLevel2(String requestParameter) {
-		String escapedString = StringEscapeUtils.escapeEcmaScript(requestParameter);
-		return requestParameter;
+		if(requestParameter.contains(requestParameter)){
+			return requestParameter;
+		}else{
+			return requestParameter;
+		}
+
 	}
 
 
 	private static String falsePositivTransformationLevel3(String requestParameter) {
 		String s = StringEscapeUtils.escapeEcmaScript(requestParameter);
 		if(s.isEmpty()) {
-			StringEscapeUtils.escapeEcmaScript(s);
-			s = requestParameter;
+
 			return s;
 		}else {
-			StringEscapeUtils.escapeEcmaScript(s);
-			s = requestParameter;
-			return s ;
+			if(s.equalsIgnoreCase(requestParameter)){
+				return requestParameter;
+			}else{
+				StringEscapeUtils.escapeEcmaScript(s);
+				s = requestParameter;
+				return s ;
+			}
+
 		}
 	}
 
